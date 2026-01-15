@@ -7,7 +7,7 @@ const App = () => {
   const signin = async(name,email,picture) => {
     let trops = {name,email,picture}
     try{
-      let response = await axios.post("http://localhost:5000/signin",trops,{
+      let response = await axios.post("https://luvtheblog.onrender.com/signin",trops,{
         withCredentials:true,
         headers:{
           "Content-Type":"application/json"
@@ -17,7 +17,7 @@ const App = () => {
       let data = response.data
       console.log(data)
       if(response.status === 200 || response.status === 201){
-        window.location.href = "http://localhost:5000/profile"
+        window.location.href = "https://luvtheblog.onrender.com/profile"
       }
     }
     catch(err){
@@ -32,7 +32,7 @@ const App = () => {
         <div className="shape shape-3"></div>
     </div>
 
-    <a href="http://localhost:5000" className="back-home">
+    <a href="https://luvtheblog.onrender.com/" className="back-home">
         <i class="fas fa-arrow-left"></i> Back to Home
     </a>
 
