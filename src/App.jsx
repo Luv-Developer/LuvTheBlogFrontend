@@ -5,8 +5,8 @@ import axios from "axios"
 
 const App = () => {
   const signin = async(name,email,picture) => {
-    let trops = {name,email,picture}
     try{
+      let trops = {name,email,picture}
       let response = await axios.post("https://luvtheblog.onrender.com/signin",trops,{
         withCredentials:true,
         headers:{
